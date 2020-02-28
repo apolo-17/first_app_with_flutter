@@ -28,13 +28,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -74,6 +72,12 @@ flutter:
     - assets/img/people.jpg
     - assets/img/ann.jpg
     - assets/img/girl.jpg
+    - assets/img/beach_palm.jpeg
+    - assets/img/beach.jpeg
+    - assets/img/mountain_stars.jpeg
+    - assets/img/mountain.jpeg
+    - assets/img/river.jpeg
+    - assets/img/sunset.jpeg
 
   fonts:
     - family: Lato

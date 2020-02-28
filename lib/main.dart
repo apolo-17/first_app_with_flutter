@@ -8,31 +8,34 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  String descriptionDummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+  String descriptionDummy =
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+  String title = 'Popular';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        //body: new DescriptionPlace('Acapulco',4,descriptionDummy),
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                DescriptionPlace('Acapulco',4,descriptionDummy),
-                ReviewList()
-              ],
-            ),
-            GradientBack(),
-          ],
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
-      )
-      //MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+        home: Scaffold(
+          //body: new DescriptionPlace('Acapulco',4,descriptionDummy),
+          body: Stack(
+            children: <Widget>[
+              ListView(
+                children: <Widget>[
+                  DescriptionPlace('Acapulco', 4, descriptionDummy),
+                  ReviewList()
+                ],
+              ),
+              GradientBack(title),
+            ],
+          ),
+        )
+        //MyHomePage(title: 'Flutter Demo Home Page'),
+        );
   }
 }
 
