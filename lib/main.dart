@@ -1,16 +1,10 @@
-import 'package:first_app/review_list.dart';
 import 'package:flutter/material.dart';
-import 'description_place.dart';
-import 'review_list.dart';
-import 'gradient_back.dart';
-import 'header_appbar.dart';
+import 'platzi_trips.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  String descriptionDummy =
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus";
 
   String title = 'Popular';
 
@@ -21,20 +15,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Scaffold(
-          //body: new DescriptionPlace('Acapulco',4,descriptionDummy),
-          body: Stack(
-            children: <Widget>[
-              ListView(
-                children: <Widget>[
-                  DescriptionPlace('Acapulco', 4, descriptionDummy),
-                  ReviewList()
-                ],
-              ),
-              HeaderAppBar(),
-            ],
-          ),
-        )
+        home: PlatziTrips()
         //MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }

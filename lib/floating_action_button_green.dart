@@ -9,10 +9,15 @@ class FloatingActionButtonGreen extends StatefulWidget {
 }
 
 class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
+  bool isFav = false;
   void onPressedFav() {
     Scaffold.of(context).showSnackBar(SnackBar(
-      content: Text('Agregaste a tus favoritos'),
+      content:
+          Text(isFav ? 'Eliminado de favoritos' : 'Añadido a tus favoritos'),
     ));
+    setState(() {
+      isFav = !isFav;
+    });
   }
 
   @override
@@ -23,7 +28,7 @@ class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
       mini: true,
       tooltip: "Fav",
       onPressed: onPressedFav,
-      child: Icon(Icons.favorite_border),
+      child: Icon(isFav ? Icons.favorite : Icons.favorite_border),
     );
   }
 }
